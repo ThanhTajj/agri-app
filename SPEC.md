@@ -375,3 +375,8 @@ Các nội dung dưới đây chưa phải yêu cầu đã được phê duyệt
 | GAP-09 | Có cho phép xóa vật tư hoặc điều chỉnh tồn thủ công trong MVP không? | Không hỗ trợ; điều chỉnh tồn cần nghiệp vụ/loại phiếu riêng được phê duyệt. | Phạm vi chức năng và tính toàn vẹn tồn. |
 
 **Quy tắc xử lý SPEC GAP:** Nếu quyết định của người dùng làm thay đổi rule, API hoặc tiêu chí nghiệm thu, cập nhật tài liệu này trước khi xem đó là yêu cầu chính thức. Đề xuất được nêu trong bảng chỉ là phương án chờ xác nhận, không phải phê duyệt ngầm.
+
+## 12. 2 lỗi/thiếu sót
+**Test defect:** Integration tests dùng mã vật tư chưa chuẩn hóa, không nhất quán với quy tắc trong Spec. Cách sửa là chỉnh test và cleanup.
+
+**Missing test:** Chưa kiểm tra hai request đồng thời tạo mã vật tư trùng nhưng dùng idempotency key khác nhau. Cách sửa là bổ sung MySQL integration test.
